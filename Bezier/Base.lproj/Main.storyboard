@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2KG-uh-ZMv">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fP9-Fl-OpY">
+            <objects>
+                <navigationController id="2KG-uh-ZMv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iyn-C6-hpc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bsD-PG-uV1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o70-g5-3de" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593" y="322"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bezier" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pww-1A-Jf9">
+                                <rect key="frame" x="252" y="175" width="96" height="30"/>
+                                <animations/>
+                                <state key="normal" title="PullToSeprate"/>
+                                <connections>
+                                    <segue destination="buV-fe-ez1" kind="push" id="zAz-n6-Spq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="082-SO-kZ8">
+                                <rect key="frame" x="277" y="298" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lv8-PW-I2s">
+                                <rect key="frame" x="277" y="237" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lv8-PW-I2s" firstAttribute="top" secondItem="Pww-1A-Jf9" secondAttribute="bottom" constant="32" id="6sI-W7-Fug"/>
+                            <constraint firstItem="Pww-1A-Jf9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KWa-uK-QO4"/>
+                            <constraint firstItem="lv8-PW-I2s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U80-hI-JtR"/>
+                            <constraint firstItem="Pww-1A-Jf9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="111" id="Xm9-Rm-3Jx"/>
+                            <constraint firstItem="082-SO-kZ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mDd-MD-arB"/>
+                            <constraint firstItem="082-SO-kZ8" firstAttribute="top" secondItem="lv8-PW-I2s" secondAttribute="bottom" constant="31" id="tSn-92-1H8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RFc-z2-xfY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Pull To Seprate View Controller-->
+        <scene sceneID="eRP-Da-zfX">
+            <objects>
+                <viewController id="buV-fe-ez1" customClass="PullToSeprateViewController" customModule="Bezier" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y7J-Pw-DSf"/>
+                        <viewControllerLayoutGuide type="bottom" id="5GC-11-0tF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OJE-6P-BDM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VbA-Wt-eHc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKN-Tr-xTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="327"/>
+        </scene>
+    </scenes>
+</document>
