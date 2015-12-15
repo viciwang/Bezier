@@ -7,27 +7,18 @@
 //
 
 import UIKit
+import Masonry
 
 class PullToSeprateViewController: UIViewController {
     
     var originView:UIView
     var secondView:UIView
-    
-    init() {
-        originView = UIView()
-        originView.backgroundColor = UIColor.grayColor()
-        
-        secondView = UIView()
-        secondView.backgroundColor = UIColor.grayColor()
-        
-        super.init()
-    }
 
     required init?(coder aDecoder: NSCoder) {
-        originView = UIView()
+        originView = UIView(frame: CGRectMake(0,0,10,10))
         originView.backgroundColor = UIColor.grayColor()
         
-        secondView = UIView()
+        secondView = UIView(frame: CGRectMake(0,0,10,10))
         secondView.backgroundColor = UIColor.grayColor()
         
         super.init(coder: aDecoder)
@@ -36,6 +27,15 @@ class PullToSeprateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func updateViewConstraints() {
+        originView.mas_makeConstraints {
+            [unowned self]
+            (make:MASConstraintMaker!) -> Void in
+            make.center.equalTo()(self.view)
+            make.size.mas_equalTo()(CGSize(10,10))
+        }
     }
 
     override func didReceiveMemoryWarning() {
